@@ -519,7 +519,7 @@ public class MarkdownProcessor {
                     return html;
                 }
             };
-            Pattern matchStartOfLine = Pattern.compile("(?:(?<=\\n\\n)|\\A\\n?)" + wholeList, Pattern.MULTILINE);
+            Pattern matchStartOfLine = Pattern.compile("(?:(?<=\\n\\n)|(?<=</h\\d>\\n)|\\A\\n?)" + wholeList, Pattern.MULTILINE);
             text.replaceAll(matchStartOfLine, replacer);
 
         }
